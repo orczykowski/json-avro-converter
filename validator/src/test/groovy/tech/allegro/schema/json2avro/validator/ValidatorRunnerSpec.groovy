@@ -28,6 +28,18 @@ class ValidatorRunnerSpec extends Specification {
         noExceptionThrown()
     }
 
+    def "should validate JSON document with DECIMAL"() {
+
+        given:
+            ValidatorOptions options = new ValidatorOptions(schemaPath: resource('item.avcs'), inputPath: resource('item.json'))
+
+        when:
+            runner.run(options)
+
+        then:
+            noExceptionThrown()
+    }
+
     def "should report JSON validation errors"() {
 
         given:

@@ -1,0 +1,13 @@
+{"namespace": "pl.allegro",
+ "type": "record",
+ "name": "Item",
+ "fields": [
+     {"name": "name", "type": "string"},
+     {"name": "price",  "type": {"type": "bytes",  "logicalType": "decimal",  "precision": 4}},
+     {
+         "name": "__metadata",
+         "type": ["null", {"type": "map", "values": "string"}],
+         "default": null
+     }
+ ]
+}
